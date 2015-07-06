@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+
+
+    <com.yyy.djk.stickfilterindexlistview.ClearEditText
+        android:id="@+id/clearEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/search_border"
+        android:drawableLeft="@mipmap/ic_search_grey600_24dp"
+        android:hint="请输入关键字"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textSize="14sp"
+        />
+
+    <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+        android:id="@+id/stickListHeadersListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/clearEditText"
+        />
+
+    <TextView
+        android:id="@+id/dialog"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/head_number_bg"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:visibility="gone"/>
+
+    <com.yyy.djk.stickfilterindexlistview.SideBar
+        android:id="@+id/sideBar"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/clearEditText"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+
+</RelativeLayout>
