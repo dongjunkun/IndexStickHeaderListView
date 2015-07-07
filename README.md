@@ -12,3 +12,5 @@ a fast search stick header listview
  - <a href="https://github.com/google/material-design-icons">Google Material Design Icons</a>
 
 ##About Me
+a android developer, love android, love google, love open source
+if you have any good idea for this project, for free contact me
