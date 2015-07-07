@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements SideBar.OnTouchin
         } else {
             filterDataList.clear();
             for (City sortModel : cities) {
-                String name = sortModel.getName();
+                String name = sortModel.getCity();
                 if (name.indexOf(s.toString()) != -1 || characterParser.getSelling(name).startsWith(s.toString())) {
                     filterDataList.add(sortModel);
                 }
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements SideBar.OnTouchin
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(MainActivity.this, ((City) cityAdapter.getItem(position)).getName(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, ((City) cityAdapter.getItem(position)).getCity(), Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity implements SideBar.OnTouchin
                 cities = new Gson().fromJson(s, new TypeToken<ArrayList<City>>() {
                 }.getType());
                 for (City city : cities) {
-                    String pinyin = characterParser.getSelling(city.getName());
+                    String pinyin = characterParser.getSelling(city.getCity());
                     String sortString = pinyin.substring(0, 1).toUpperCase();
                     city.setSortLetter(sortString);
                 }

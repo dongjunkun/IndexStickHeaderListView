@@ -76,7 +76,7 @@ public class CityAdapter extends BaseAdapter implements StickyListHeadersAdapter
             viewHolder = new ViewHolder(convertView);
             convertView.setTag(viewHolder);
         }
-        viewHolder.mCity.setText(cities.get(position).getName());
+        viewHolder.mCity.setText(cities.get(position).getCity());
         return convertView;
     }
 
