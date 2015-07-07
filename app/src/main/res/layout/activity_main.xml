@@ -34,6 +34,7 @@
         android:layout_centerVertical="true"
         android:background="@drawable/head_number_bg"
         android:gravity="center"
+        android:textColor="@color/primary_color"
         android:textSize="30sp"
         android:visibility="gone"/>
 

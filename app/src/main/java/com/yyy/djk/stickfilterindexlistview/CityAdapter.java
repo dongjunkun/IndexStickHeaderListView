@@ -32,10 +32,15 @@ public class CityAdapter extends BaseAdapter implements StickyListHeadersAdapter
             viewHolder = new HeadViewHolder(convertView);
             convertView.setTag(viewHolder);
         }
+        //必须加""连接，否则会出现空指针异常，原因是setText方法传入整型参数会被解析成资源类型
         viewHolder.mHeadText.setText(""+cities.get(position).getSortLetter().charAt(0));
         return convertView;
     }
 
+    /**
+     * 更新列表
+     * @param cities
+     */
     public void updateList(List<City> cities){
         this.cities = cities;
         notifyDataSetChanged();

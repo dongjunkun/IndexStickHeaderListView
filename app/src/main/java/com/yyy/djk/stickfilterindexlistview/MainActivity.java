@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.inject(this);
 
-        new MyAsyncTask(this).execute("city.json");
         initView();
+        new MyAsyncTask(this).execute("city.json");
     }
 
     private void initView() {
