@@ -155,18 +155,20 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String s) {
-            //JSON数据转List对象
-            cities = new Gson().fromJson(s, new TypeToken<ArrayList<City>>() {
-            }.getType());
-            for (City city : cities) {
-                String pinyin = characterParser.getSelling(city.getName());
-                String sortString = pinyin.substring(0, 1).toUpperCase();
-                city.setSortLetter(sortString);
+            if (!s.equals("")) {
+                //JSON数据转List对象
+                cities = new Gson().fromJson(s, new TypeToken<ArrayList<City>>() {
+                }.getType());
+                for (City city : cities) {
+                    String pinyin = characterParser.getSelling(city.getName());
+                    String sortString = pinyin.substring(0, 1).toUpperCase();
+                    city.setSortLetter(sortString);
+                }
+                //根据a-z 排序
+                Collections.sort(cities, pinyinComparator);
+                mProgressBar.setVisibility(View.GONE);
+                cityAdapter.updateList(cities);
             }
-            //根据a-z 排序
-            Collections.sort(cities, pinyinComparator);
-            mProgressBar.setVisibility(View.GONE);
-            cityAdapter.updateList(cities);
         }
     }
 
