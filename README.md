@@ -1,8 +1,12 @@
-## StickFilterIndexListView
-a fast search stick header listview
+## IndexStickHeaderListView
+a fast scroll index stick header ListView
+
+## Features
+ - support chinese pinyin filter
+ - support stick header effort base on emilsjolander <a href="https://github.com/emilsjolander/StickyListHeaders">StickyListHeaders</a>
 
 ##Screen Shot
-<img src="https://raw.githubusercontent.com/dongjunkun/StickFilterIndexListView/master/art/stickFilterIndexListView.gif"/>
+<img src="https://raw.githubusercontent.com/dongjunkun/StickFilterIndexListView/master/art/simple.gif"/>
 
 <a href="https://raw.githubusercontent.com/dongjunkun/StickFilterIndexListView/master/app/build/outputs/apk/app-debug.apk">DownLoad Demo</a>
 
